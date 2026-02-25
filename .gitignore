@@ -33,3 +33,11 @@ asass.txt
 # Sub-projects (have their own repos)
 Bot WhatsApp/
 sistema-loja/
+
+# User uploads and data
+backend-site-loja/uploads/
+backend-site-loja/data/
+*.webp
+*.jpeg
+*.jpg
+*.pdf
