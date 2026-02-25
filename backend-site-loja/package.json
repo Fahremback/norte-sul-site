@@ -1,0 +1,47 @@
+
+{
+  "name": "norte-sul-informatica-backend",
+  "version": "1.0.0",
+  "description": "Backend para o sistema Norte Sul Informática",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm run prisma:generate && nodemon server.js",
+    "db:reset": "prisma db push --force-reset --schema=./prisma/schema.prisma.js",
+    "prisma:generate": "npx prisma generate --schema=./prisma/schema.prisma.js",
+    "prisma:migrate": "npx prisma migrate dev --schema=./prisma/schema.prisma.js",
+    "prisma:studio": "npx prisma studio --schema=./prisma/schema.prisma.js",
+    "prisma:seed": "node prisma/seed.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "api",
+    "informatica"
+  ],
+  "author": "Norte Sul Informática",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.9.0",
+    "@prisma/client": "^5.14.0",
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "sharp": "^0.33.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prisma": "^5.14.0"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js",
+    "schema": "prisma/schema.prisma.js"
+  }
+}

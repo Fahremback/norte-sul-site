@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Adiciona um estilo base para line-clamp, pode ser necessário um plugin do Tailwind para suporte total em todos os navegadores se não estiver já incluído */
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
